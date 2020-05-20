@@ -1,0 +1,167 @@
+﻿<Styles xmlns="https://github.com/avaloniaui">
+ 
+  <Style Selector="Grid.mainContainer">
+    <Setter Property="Background" Value="#fdfdfd"></Setter>
+    <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+  </Style>
+
+  <!--Header-->
+  <Style Selector="Border.header">
+    <Setter Property="Background" Value="#155EA1"></Setter>
+    <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+    <Setter Property="Height" Value="80"></Setter>
+    <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+    <Setter Property="BorderBrush" Value="#3C86BD"></Setter>
+  </Style>
+  <Style Selector="StackPanel.title">
+    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    <Setter Property="Orientation" Value="Horizontal"></Setter>
+  </Style>
+  <Style Selector="TextBlock.title">
+    <Setter Property="FontSize" Value="32"></Setter>
+    <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+    <Setter Property="FontWeight" Value="DemiBold"></Setter>
+  </Style>
+  <Style Selector="TextBlock.titleYellow">
+    <Setter Property="FontSize" Value="32"></Setter>
+    <Setter Property="Foreground" Value="#FFDD2E"></Setter>
+    <Setter Property="FontWeight" Value="DemiBold"></Setter>
+  </Style>
+
+  <!--Content-->
+  <Style  Selector="Grid.contentContainer">
+    <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies">
+    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    <Setter Property="BorderThickness" Value="0"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem /template/ ContentPresenter">
+    <Setter Property="BorderThickness" Value="1"></Setter>
+    <Setter Property="BorderBrush" Value="#E2E5F3"></Setter>
+    <Setter Property="Margin" Value="8"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem > Grid > Border.title">
+    <Setter Property="Margin" Value="-2"></Setter>
+    <Setter Property="BorderThickness" Value="0 1 0 0"></Setter>
+    <Setter Property="BorderBrush" Value="#E2E5F3"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem > Grid > Border > Grid > TextBlock">
+    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    <Setter Property="FontWeight" Value="SemiBold"></Setter>
+    <Setter Property="Foreground" Value="#819FFF"></Setter>
+    <Setter Property="TextWrapping" Value="Wrap"></Setter>
+  </Style>
+
+  <!--ListBox scroll-bar-->
+  <Style Selector="ListBox.movies /template/ ScrollViewer#PART_ScrollViewer /template/  ScrollBar#verticalScrollBar /template/ Thumb#thumb">
+    <Setter Property="Background">
+      <Setter.Value>
+          <LinearGradientBrush>
+            <GradientStop Color="#55A5EE" Offset="0.25" />
+            <GradientStop Color="#596ACC" Offset="1" />
+          </LinearGradientBrush>
+        </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies /template/ ScrollViewer#PART_ScrollViewer /template/  ScrollBar#verticalScrollBar /template/ RepeatButton">
+    <Setter Property="Background" Value="#E2E5F3"/>
+  </Style>
+  
+  <Style Selector="ListBox.movies /template/ ScrollViewer#PART_ScrollViewer /template/  ScrollBar#verticalScrollBar /template/ Grid">
+    <Setter Property="Background" Value="#E2E5F3"/>
+  </Style>
+  
+  <!--Pseudoclasses for list-->
+  <Style Selector="ListBox.movies > ListBoxItem:selected /template/ ContentPresenter">
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush>
+          <GradientStop Color="#55A5EE" Offset="0.25" />
+          <GradientStop Color="#596ACC" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem:pointerover /template/ ContentPresenter">
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush>
+          <GradientStop Color="#55A5EE" Offset="0.25" />
+          <GradientStop Color="#596ACC" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem:selected > Grid > Border > Grid > TextBlock">
+    <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+  </Style>
+  
+  <Style Selector="ListBox.movies > ListBoxItem:pointerover > Grid > Border > Grid > TextBlock">
+    <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem:selected > Grid > Border.title">
+    <Setter Property="BorderBrush" Value="#FFFFFF"></Setter>
+    <Setter Property="Opacity" Value="0.85"></Setter>
+  </Style>
+
+  <Style Selector="ListBox.movies > ListBoxItem:pointerover > Grid > Border.title">
+    <Setter Property="BorderBrush" Value="#FFFFFF"></Setter>
+    <Setter Property="Opacity" Value="0.85"></Setter>
+  </Style>
+
+
+  <!--NavButtons-->
+  <Style Selector="Button.navigation">
+    <Setter Property="Background" Value="Transparent"></Setter>
+    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    <Setter Property="Margin" Value="12"></Setter>
+    <Setter Property="Foreground" Value="#2977B4"></Setter>
+    <Setter Property="FontSize" Value="24"></Setter>
+  </Style>
+
+  <Style Selector="Button.navigation /template/ ContentPresenter">
+    <Setter Property="BorderThickness" Value="0"></Setter>
+    <Setter Property="Padding" Value="8"></Setter>
+  </Style>
+
+  <Style Selector="Button.navigation:pointerover">
+    <Setter Property="Foreground" Value="#819FFF"></Setter>
+  </Style>
+
+  <Style Selector="Button.navigation:pointerover > ContentControl /template/ ContentPresenter">
+    <Setter Property="BorderBrush" Value="#819FFF"></Setter>
+    <Setter Property="Background" Value="Transparent"></Setter>
+  </Style>
+
+  <Style Selector="Button.navigation:pressed /template/ ContentPresenter">
+    <Setter Property="BorderBrush" Value="#819FFF"></Setter>
+    <Setter Property="Background" Value="Transparent"></Setter>
+  </Style>
+
+  <Style Selector="ProgressBar.progressBar">
+    <Setter Property="Foreground">
+      <Setter.Value>
+        <LinearGradientBrush>
+          <GradientStop Color="#55A5EE" Offset="0.25" />
+          <GradientStop Color="#596ACC" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Background" Value="#E2E5F3"></Setter>
+  </Style>
+</Styles>
