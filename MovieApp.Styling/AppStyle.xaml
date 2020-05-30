@@ -154,6 +154,8 @@
   </Style>
 
   <Style Selector="ProgressBar.progressBar">
+    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
     <Setter Property="Foreground">
       <Setter.Value>
         <LinearGradientBrush>

@@ -19,9 +19,40 @@
       </StackPanel>
     </Border>
 
-    <StackPanel Grid.Row="1">
-      <TextBlock Text="{Binding Text, Mode=OneWay}"/>
-    </StackPanel>
+    <Grid Classes="contentContainer" Grid.Row="1">
+      <ProgressBar
+          IsVisible="{Binding InitializationNotifier.IsNotCompleted}"
+          Classes="progressBar" IsIndeterminate="True"/>
+
+      <ListBox Classes="movies"
+        Grid.Column="1" Grid.Row="1"
+        IsVisible="{Binding InitializationNotifier.IsCompleted, Mode=TwoWay}"
+        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        Items="{Binding MyItems}">
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" MinHeight="48"/>
+              </Grid.RowDefinitions>
+              <Image Grid.Row="0" Stretch="UniformToFill" Source="{Binding Poster}"/>
+              <Border Grid.Row="1" Classes="title">
+                <Grid ColumnDefinitions="*, 0.4*" Margin="4">
+                  <TextBlock FontSize="18" Text="{Binding Title}" />
+                  <TextBlock FontSize="24" Grid.Column="1" Text="{Binding VoteAverage}"/>
+                </Grid>
+              </Border>
+            </Grid>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+        <ListBox.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel ItemWidth="340" ItemHeight="480" Orientation="Horizontal"  />
+          </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+      </ListBox>
+    </Grid>
   </Grid>
 </Window>
 
