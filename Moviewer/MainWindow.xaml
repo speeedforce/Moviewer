@@ -19,12 +19,36 @@
       </StackPanel>
     </Border>
 
-    <Grid Classes="contentContainer" Grid.Row="1">
-      <ProgressBar
-          IsVisible="{Binding InitializationNotifier.IsNotCompleted}"
-          Classes="progressBar" IsIndeterminate="True"/>
+    <Grid Classes="contentContainer" Grid.Row="1"
+          ColumnDefinitions="Auto, *, Auto"
+          RowDefinitions="Auto, *" >
 
-      <ListBox Classes="movies"
+      <TextBlock Grid.Column="1"
+                 HorizontalAlignment="Center"
+                 Margin="4"
+                 FontSize="18"
+                 FontWeight="Bold"
+                 Foreground="#819FFF"
+                 Text="{Binding Path=Page}"/>
+
+      <Button Command="{Binding PrevPage}"
+        Grid.Row="1" Grid.Column="0"
+        Content="PREV"
+        Classes="navigation">
+      </Button>
+
+      <Button Command="{Binding NextPage}"
+            Grid.Row="1" Grid.Column="2"
+            Content="NEXT"
+            Classes="navigation">
+      </Button>
+
+     <ProgressBar
+         Grid.Column="1" Grid.Row="1"
+         IsVisible="{Binding InitializationNotifier.IsNotCompleted}"
+         Classes="progressBar" IsIndeterminate="True"/>
+
+     <ListBox Classes="movies"
         Grid.Column="1" Grid.Row="1"
         IsVisible="{Binding InitializationNotifier.IsCompleted, Mode=TwoWay}"
         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
